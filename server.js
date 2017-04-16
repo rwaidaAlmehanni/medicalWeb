@@ -13,7 +13,7 @@ var port       = process.env.PORT || 8000;
 app.get('/allData', function(req, res){
 
   var obj={"Pharmaceutical":[],"Medical Equipment":[],"Laboratory Product":[],"Medical Disposable and Consumable":[],"Nutrition and Cosmetic":[]};
-  var arr=[],flage1=true;
+  var arr=[];
    
    url = ['http://www.medicaltenders.com/medical_tenders_egypt.htm','http://www.medicaltenders.com/search.php?total=134&off=10&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=20&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=30&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=40&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=50&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=60&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=70&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=80&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=90&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=100&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=120&inc=n&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=130&inc=n&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline=','http://www.medicaltenders.com/search.php?total=134&off=130&inc=y&global=1&region_name[]=EG&notice_type_new[]=1,2,3,7,10,11,16,9,4,8,5&sector=18&deadline='];
 
@@ -42,14 +42,13 @@ for(var i=0 ; i<url.length ; i++){
 
 }
   
-for(var i=0 ; i<x.length ; i++){
+for(var i=0 ; i<x.length ; i++){//loop json file data...
    for(var k=0 ; k<x[i]['data'].length ; k++){
 
       if(x[i].data[k].indexOf("Pharmaceutical")!==-1){
         obj["Pharmaceutical"].push(x[i])
         
-
-       }else if(x[i]['data'][k].indexOf("Equipment")!==-1 ){
+       }else if(x[i]['data'][k].indexOf("Equipment")!==-1){
         obj["Medical Equipment"].push(x[i])
 
        }else if(x[i]['data'][k].indexOf("Laboratory")!==-1){

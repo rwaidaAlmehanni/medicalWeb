@@ -15,11 +15,11 @@
   body {
       position: relative; 
   }
-  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #section5 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  #section1 {padding-top:50px;height:auto;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:auto;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:auto;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;height:auto;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;height:auto;color: #fff; background-color: #009688;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" ng-app="myApp">
@@ -47,23 +47,33 @@
   </div>
 </nav>    
 <div ng-controller="myData">
-<div id="section1" class="container-fluid" ng-repeat="s1 in sec1">
-<p>{{s1}}</p>
+<div id="section1" class="container-fluid">
+<ul ng-repeat="s1 in sec1 track by $index">
+  <li >{{s1}}</li>
+</ul>
 
 </div>
-<div id="section2" class="container-fluid" ng-repeat="s2 in sec2">
-  <p>{{s2}}</p>
+<div id="section2" class="container-fluid" >
+ <ul ng-repeat="s2 in sec2 track by $index">
+  <li >{{s2}}</li>
+</ul>
 </div>
-<div id="section3" class="container-fluid" ng-repeat="s3 in sec3">
-<p>{{s3}}</p>
+<div id="section3" class="container-fluid">
+<ul ng-repeat="s3 in sec3 track by $index">
+  <li >{{s3}}</li>
+</ul>
 
 </div>
-<div id="section4" class="container-fluid" ng-repeat="s4 in sec4">
+<div id="section4" class="container-fluid">
  
-<p>{{s4}}</p>
+<ul ng-repeat="s4 in sec4 track by $index">
+  <li >{{s4}}</li>
+</ul>
 </div>
-<div id="section5" class="container-fluid" ng-repeat="s5 in sec5">
- <p>{{s5}}</p>
+<div id="section5" class="container-fluid">
+ <ul ng-repeat="s5 in sec5 track by $index">
+  <li >{{s5}}</li>
+</ul>
 
 </div>
 </div>
