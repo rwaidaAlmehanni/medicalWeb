@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+  <title>Aumet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-route.js"></script>
+  <script src="app.js"></script>
+
+  <style>
+  body {
+      position: relative; 
+  }
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" ng-app="myApp">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+       </button>
+      <a class="navbar-brand" href="#">Aumet</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Pharmaceutical</a></li>
+          <li><a href="#section2">Medical Equipment</a></li>
+          <li><a href="#section3">Laboratory Product</a></li>
+          <li><a href="#section4">Medical Disposable and Consumable</a></li>
+          <li><a href="#section5">Nutrition and Cosmetic</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+<div ng-controller="myData">
+<div id="section1" class="container-fluid" ng-repeat="s1 in sec1">
+<p>{{s1}}</p>
+
+</div>
+<div id="section2" class="container-fluid" ng-repeat="s2 in sec2">
+  <p>{{s2}}</p>
+</div>
+<div id="section3" class="container-fluid" ng-repeat="s3 in sec3">
+<p>{{s3}}</p>
+
+</div>
+<div id="section4" class="container-fluid" ng-repeat="s4 in sec4">
+ 
+<p>{{s4}}</p>
+</div>
+<div id="section5" class="container-fluid" ng-repeat="s5 in sec5">
+ <p>{{s5}}</p>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,13 +1,24 @@
 {
   "name": "medicalWeb",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple medicalWeb written in JavaScript using web crawler way",
   "main": "crawler.js",
   "author": "Rwaida Almehanni",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "cheerio": "^0.19.0",
+    "jquery": "^3.2.1",
+    "request": "^2.65.0",
     "url-parse": "^1.0.5",
-    "request": "^2.65.0"
+  "angular-ui-bootstrap": "^2.5.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "*",
+    "express": "^4.14.1",
+    "nodemailer": "^3.1.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.7.0",
+    "nodemon": "^1.11.0"
   }
 }
